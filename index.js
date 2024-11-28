@@ -20,7 +20,8 @@ app.use(express.urlencoded({ limit: '50mb', extended: true }));
 
 //Cors Middleware
 const corsOptions = {
-    origin: process.env.ALLOWED_CLIENTS,
+    // origin: process.env.ALLOWED_CLIENTS,
+    origin: '*',
     methods: "GET,POST,PUT,DELETE,PATCH,HEAD",
     credentials: true,
     optionsSuccessStatus: 200
@@ -67,7 +68,7 @@ connectDB()
     .then(() => {
         app.listen(process.env.PORT, () => {
             console.log('Server is running on port ' + process.env.PORT);
-            console.log('Cors accept form URL ' + process.env.ALLOWED_CLIENTS);
+            console.log('Cors accepted' );
         });
     }
     )
