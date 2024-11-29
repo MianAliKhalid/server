@@ -1,0 +1,157 @@
+# Node.js Backend Server with Image Upload  
+
+This backend server is built using **Node.js**, **Express**, and **MongoDB**. It provides robust functionality for user authentication, image uploads, and various administrative features, making it an ideal solution for web applications requiring secure and efficient backend operations.  
+
+---
+
+## **Table of Contents**  
+
+1. [Features](#features)  
+2. [Prerequisites](#prerequisites)  
+3. [Installation](#installation)  
+4. [Environment Variables](#environment-variables)  
+5. [API Endpoints](#api-endpoints)  
+   - [Authentication](#authentication)  
+   - [Image Upload](#image-upload)  
+   - [Admin Routes](#admin-routes)  
+   - [Services](#services)  
+6. [Error Handling](#error-handling)  
+7. [Models](#models)  
+8. [Middleware](#middleware)  
+
+---
+
+## **Features**  
+
+- **User Authentication**: Secure user registration, login, and logout.  
+- **Image Upload**: Powered by Cloudinary, including metadata management.  
+- **Role-Based Access Control**: Supports roles such as Admin, Moderator, and User.  
+- **Contact Form Management**: Handles user inquiries via a contact form.  
+- **Service Management**: CRUD operations for managing services.  
+- **Testimonial System**: Add and manage user testimonials.  
+- **Profile Management**: Includes updating user information such as email, phone, and password.  
+
+---
+
+## **Prerequisites**  
+
+- **Node.js**: Version 14 or higher.  
+- **MongoDB**: A running MongoDB instance or Atlas cluster.  
+- **Cloudinary Account**: For image storage and management.  
+- **npm** or **yarn**: Package managers to install dependencies.  
+
+---
+
+## **Installation**  
+
+1. **Clone the Repository**  
+   ```bash  
+   git clone https://github.com/MianAliKhalid/server.git  
+   cd server  
+   ```  
+
+2. **Install Dependencies**  
+   ```bash  
+   npm install  
+   ```  
+
+3. **Configure Environment Variables**  
+   Copy `.env.example` to `.env` and update the values:  
+   ```plaintext  
+   MONGO_URI=<your-mongodb-uri>  
+   CLOUDINARY_CLOUD_NAME=<your-cloudinary-cloud-name>  
+   CLOUDINARY_API_KEY=<your-cloudinary-api-key>  
+   CLOUDINARY_API_SECRET=<your-cloudinary-api-secret>  
+   JWT_SECRET=<your-jwt-secret>  
+   ```  
+
+4. **Start the Server**  
+   ```bash  
+   npm start  
+   ```  
+
+---
+
+## **Environment Variables**  
+
+| Variable Name           | Description                          | Example Value            |  
+|--------------------------|--------------------------------------|--------------------------|  
+| `MONGO_URI`             | MongoDB connection string           | `mongodb://localhost:27017/app-db` |  
+| `CLOUDINARY_CLOUD_NAME` | Cloudinary cloud name               | `my-cloud`               |  
+| `CLOUDINARY_API_KEY`    | Cloudinary API key                  | `1234567890`             |  
+| `CLOUDINARY_API_SECRET` | Cloudinary API secret               | `abcdefg123456`          |  
+| `JWT_SECRET`            | Secret key for JWT authentication  | `supersecretkey`         |  
+
+---
+
+## **API Endpoints**  
+
+### **Authentication**  
+
+- `POST /auth/register`: Register a new user.  
+- `POST /auth/login`: Authenticate a user and generate a JWT.  
+- `GET /auth/user`: Retrieve the logged-in user's profile.  
+- `PATCH /auth/update-password`: Update a user's password.  
+- `POST /auth/update-email`: Update a user's email address.  
+- `POST /auth/update-phone`: Update a user's phone number.  
+
+### **Image Upload**  
+
+- `POST /api/file/upload`: Upload an image with metadata.  
+- `GET /api/file/images`: Fetch all uploaded images.  
+- `PUT /api/file/update`: Update image metadata.  
+- `DELETE /api/file/delete-image/:id`: Delete an image by its ID.  
+
+### **Admin Routes**  
+
+- `GET /admin/users`: Retrieve all users.  
+- `POST /admin/users/add`: Add a new user.  
+- `PATCH /admin/users/update/:id`: Update a user's details.  
+- `DELETE /admin/users/delete/:id`: Delete a user.  
+
+### **Services**  
+
+- `GET /api/services`: Get all services.  
+- `POST /admin/services/add`: Add a new service.  
+- `PATCH /admin/services/update/:id`: Update a service.  
+- `DELETE /admin/services/delete/:id`: Delete a service.  
+
+---
+
+## **Error Handling**  
+
+The server includes comprehensive error-handling mechanisms:  
+
+- **Validation Errors**: Ensures request data is valid using **Zod**.  
+- **Authentication Errors**: Handles unauthorized access attempts.  
+- **File Upload Errors**: Manages errors during file processing and storage.  
+- **Database Errors**: Gracefully handles MongoDB operation failures.  
+
+---
+
+## **Models**  
+
+The server defines the following models using **Mongoose**:  
+
+1. **User**: Manages user details and roles.  
+2. **Image**: Stores image metadata, statuses, and references to Cloudinary.  
+3. **Service**: Handles information about available services.  
+4. **Contact**: Records inquiries submitted through the contact form.  
+5. **Testimonial**: Manages user testimonials.  
+
+---
+
+## **Middleware**  
+
+- **Authentication Middleware**: Secures endpoints with JWT-based authentication.  
+- **Admin Middleware**: Ensures only admins can access certain routes.  
+- **Validation Middleware**: Validates incoming requests.  
+- **Error Handling Middleware**: Captures and processes errors.  
+- **Multer Middleware**: Manages file uploads for image handling.  
+
+---
+
+For more details, visit the GitHub repository:  
+[GitHub Repository](https://github.com/MianAliKhalid/server)  
+
+Thank you for exploring this project! 🎉
