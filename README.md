@@ -173,4 +173,4 @@ The API implements a centralized error handling middleware that returns errors i
 
 ---
 
-Made with ❤️ by Mian ALi Khalid
+Made with ❤️ by Mian Ali Khalid
