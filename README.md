@@ -1,11 +1,16 @@
 
 # Service Management Platform 🚀 🚀
 
+![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
+![Node](https://img.shields.io/badge/node-%3E%3D16.0.0-brightgreen.svg)
+
+
 A robust Node.js/Express backend API powering the MAK Tech service platform with authentication, image handling, and admin capabilities.
 
 ## 📑 Table of Contents
 
-- Features
+- [Features](#features-)
 - Tech Stack
 - Getting Started
 - Environment Variables
