@@ -1,12 +1,5 @@
-MianAliKhalid: anlyze my whole project and generate a readme file That look modern with emojis, heading, each and every thing,
 
-in details so easy for everyone
-
-use the formatting style of readme.io
-
-Workspace: Here's a modern, detailed README.md for your project:
-
-# MAK Tech API 🚀
+# Service Management Platform 🚀 🚀
 
 A robust Node.js/Express backend API powering the MAK Tech service platform with authentication, image handling, and admin capabilities.
 
@@ -180,4 +173,4 @@ The API implements a centralized error handling middleware that returns errors i
 
 ---
 
-Made with ❤️ by MAK Tech
+Made with ❤️ by Mian ALi Khalid
