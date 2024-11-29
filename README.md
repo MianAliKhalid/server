@@ -11,15 +11,15 @@ A robust Node.js/Express backend API powering the MAK Tech service platform with
 ## 📑 Table of Contents
 
 - [Features](#features-)
-- Tech Stack
-- Getting Started
-- Environment Variables
-- API Endpoints
-- Authentication
-- Database Schema
+- [Tech Stack](#Tech-Stack-)
+- [Getting Started](#Getting-Started-)
+- [Environment Variables](#Environment-Variables-)
+- [API Endpoints](#API-Endpoints-)
+- [Authentication](#Authentication-)
+- [Database Schema](#Database-Schema-)
 - [File Upload](#file-upload-)
-- Error Handling
-- Contributing
+- [Error Handling](#featuresError-Handling-)
+- [Contributing](#Contributing-)
 
 ## Features ✨
 
