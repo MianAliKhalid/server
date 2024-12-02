@@ -76,7 +76,7 @@ Create a
 
 ```sh
 PORT=3000
-ALLOWED_CLIENTS=http://localhost:5173
+ALLOWED_CLIENTS=
 MONGO_URI=your_mongodb_uri
 SALT_ROUNDS=13
 JWT_SECRET=your_jwt_secret
